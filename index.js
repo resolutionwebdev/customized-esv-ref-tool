@@ -106,7 +106,7 @@ function linkify_dom() {
 window.addEventListener('load', function () {
     this.setTimeout(function () {
         linkify_dom();
-    }, 000);
+    }, 1000);
 
     add_css();
 });
@@ -114,5 +114,5 @@ window.addEventListener('load', function () {
 window.addEventListener('esv-crossref.trigger-linkify', function () {
     this.setTimeout(function () {
         linkify_dom();
-    }, 000);
+    }, 1000);
 });
