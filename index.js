@@ -103,16 +103,21 @@ function linkify_dom() {
     match_data.forEach(function (match_datum) { linkify_node(match_datum[0], match_datum[1]); });
 }
 
+const delay_milliseconds = 1000;
+
 window.addEventListener('load', function () {
+console.log("Running custom ESV script in", delay_milliseconds, "milliseconds on 'load'");
+
     this.setTimeout(function () {
         linkify_dom();
-    }, 1000);
+    }, delay_milliseconds);
 
     add_css();
 });
 
 window.addEventListener('esv-crossref.trigger-linkify', function () {
+console.log("Running custom ESV script in", delay_milliseconds, "milliseconds on 'esv-crossref.trigger-linkify'");
     this.setTimeout(function () {
         linkify_dom();
-    }, 1000);
+    }, delay_milliseconds);
 });
