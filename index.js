@@ -103,7 +103,7 @@ function linkify_dom() {
     match_data.forEach(function (match_datum) { linkify_node(match_datum[0], match_datum[1]); });
 }
 
-const delay_milliseconds = 3000;
+const delay_milliseconds = 4000;
 
 window.addEventListener('load', function () {
 console.log("Running custom ESV script in", delay_milliseconds, "milliseconds on 'load'");
